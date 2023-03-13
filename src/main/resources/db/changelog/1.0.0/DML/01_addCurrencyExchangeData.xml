@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" labels="demo">
+        <sql>
+            INSERT INTO CURRENCY_EXCHANGE
+                (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'USD', 'EGP', 30);
+            INSERT INTO CURRENCY_EXCHANGE
+                (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'EUR', 'EGP', 31);
+            INSERT INTO CURRENCY_EXCHANGE
+                (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'KWD', 'EGP', 101);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
