@@ -4,15 +4,15 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" labels="demo">
+    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" context="dev" labels="demo">
         <sql>
             CREATE
                 TABLE CURRENCY_EXCHANGE
             (
-                ID                  NUMBER (10) NOT NULL,
+                ID                  INT         NOT NULL,
                 CURRENCY_FROM       VARCHAR(30) NOT NULL,
                 CURRENCY_TO         VARCHAR(30) NOT NULL,
-                CONVERSION_MULTIPLE NUMBER (10) NOT NULL,
+                CONVERSION_MULTIPLE INT         NOT NULL,
                 ENVIRONMENT         VARCHAR(30) NULL
             );
         </sql>

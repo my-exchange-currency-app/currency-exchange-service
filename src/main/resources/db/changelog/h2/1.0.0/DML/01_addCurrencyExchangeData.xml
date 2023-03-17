@@ -4,17 +4,17 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" labels="demo">
+    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" context="dev" labels="demo">
         <sql>
             INSERT INTO CURRENCY_EXCHANGE
                 (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
-            VALUES (CURRENCY_EXCHANGE_SEQ.NEXTVAL, 'USD', 'EGP', 30);
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'USD', 'EGP', 30);
             INSERT INTO CURRENCY_EXCHANGE
                 (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
-            VALUES (CURRENCY_EXCHANGE_SEQ.NEXTVAL, 'EUR', 'EGP', 31);
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'EUR', 'EGP', 31);
             INSERT INTO CURRENCY_EXCHANGE
                 (id, CURRENCY_FROM, CURRENCY_TO, CONVERSION_MULTIPLE)
-            VALUES (CURRENCY_EXCHANGE_SEQ.NEXTVAL, 'KWD', 'EGP', 101);
+            VALUES (NEXT VALUE FOR CURRENCY_EXCHANGE_SEQ, 'KWD', 'EGP', 101);
         </sql>
     </changeSet>
 

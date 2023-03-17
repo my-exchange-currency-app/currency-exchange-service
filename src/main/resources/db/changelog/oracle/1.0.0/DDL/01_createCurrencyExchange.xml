@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="add_currency_exchange_data" author="Ahmed.Baz" context="test" labels="demo">
+        <sql>
+            CREATE
+                TABLE CURRENCY_EXCHANGE
+            (
+                ID                  NUMBER (10) NOT NULL,
+                CURRENCY_FROM       VARCHAR(30) NOT NULL,
+                CURRENCY_TO         VARCHAR(30) NOT NULL,
+                CONVERSION_MULTIPLE NUMBER (10) NOT NULL,
+                ENVIRONMENT         VARCHAR(30) NULL
+            );
+        </sql>
+        <sql>
+            CREATE SEQUENCE CURRENCY_EXCHANGE_SEQ
+                MINVALUE 1
+                MAXVALUE 999999999
+                INCREMENT BY 1
+                START WITH 202700 NOCACHE NOCYCLE;
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
