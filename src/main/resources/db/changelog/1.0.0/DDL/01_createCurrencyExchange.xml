@@ -9,10 +9,10 @@
             CREATE
                 TABLE CURRENCY_EXCHANGE
             (
-                ID                  INT         NOT NULL,
+                ID                  NUMBER (10) NOT NULL,
                 CURRENCY_FROM       VARCHAR(30) NOT NULL,
                 CURRENCY_TO         VARCHAR(30) NOT NULL,
-                CONVERSION_MULTIPLE INT         NOT NULL,
+                CONVERSION_MULTIPLE NUMBER (10) NOT NULL,
                 ENVIRONMENT         VARCHAR(30) NULL
             );
         </sql>
