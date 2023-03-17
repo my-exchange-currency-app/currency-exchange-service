@@ -3,10 +3,11 @@ package com.demo.skyros.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity(name = "CURRENCY_EXCHANGE")
-public class CurrencyExchangeEntity {
+public class CurrencyExchangeEntity implements Serializable {
 
     @Id
     private Long id;
